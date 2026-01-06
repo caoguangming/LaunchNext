@@ -120,8 +120,6 @@ enum LocalizationKey: String {
     case versionPrefix
     case versionLabelFormat
     case versionFallback
-    case updatesHeroUpdateAvailable
-    case updatesHeroUpToDate
     case aboutProjectLink
     case aboutReportBug
     case aboutContribute
@@ -150,7 +148,6 @@ enum LocalizationKey: String {
     case settingsSectionHiddenApps
     case settingsSectionGameController
     case settingsSectionSound
-    case settingsSectionUpdates
     case backgroundStyleTitle
     case backgroundStyleOptionBlur
     case backgroundStyleOptionGlass
@@ -292,27 +289,6 @@ enum LocalizationKey: String {
     case importFailedTitle
     case okButton
 
-    // 更新检查相关
-    case checkForUpdates
-    case checkForUpdatesButton
-    case checkingForUpdates
-    case upToDate
-    case updateAvailable
-    case newVersion
-    case downloadUpdate
-    case updateCheckFailed
-    case tryAgain
-    case autoCheckForUpdates
-    case versionParseError
-    case updatesRefreshButton
-    case openUpdaterConfig
-    case updaterConfirmTitle
-    case updaterConfirmMessage
-    case updaterTerminalHint
-    case updaterLaunchFailed
-    case updaterMissingBinary
-    case updaterNotExecutable
-    case updaterHoldPrompt
 }
 
 final class LocalizationManager {
@@ -430,8 +406,6 @@ final class LocalizationManager {
                 .versionPrefix: "v",
                 .versionLabelFormat: "Version %@",
                 .versionFallback: "Unknown",
-                .updatesHeroUpdateAvailable: "Update available",
-                .updatesHeroUpToDate: "Version up to date",
                 .aboutProjectLink: "Project Link",
                 .aboutReportBug: "Report a bug",
                 .aboutContribute: "Contribute",
@@ -473,27 +447,6 @@ final class LocalizationManager {
                 .importFailedTitle: "Import Failed",
                 .okButton: "OK",
 
-                // 更新检查相关
-                .checkForUpdates: "Check for Updates",
-                .checkForUpdatesButton: "Check for Updates",
-                .checkingForUpdates: "Checking for updates...",
-                .upToDate: "You're up to date",
-                .updateAvailable: "Update Available",
-                .newVersion: "New version:",
-                .downloadUpdate: "Download Update",
-                .updateCheckFailed: "Update check failed",
-                .tryAgain: "Try Again",
-                .autoCheckForUpdates: "Check for updates automatically",
-                .versionParseError: "Version parsing error",
-                .updatesRefreshButton: "Check again",
-                .openUpdaterConfig: "Open updater config",
-                .updaterConfirmTitle: "Install update via Terminal?",
-                .updaterConfirmMessage: "LaunchNext will quit and open the Terminal-based updater. The app will relaunch automatically after installation completes.\n\nIf the Download Update button on the right looks transparent, click it anyway.\nThis is a macOS bug.⬇️",
-                .updaterTerminalHint: "The update runs in Terminal. LaunchNext will quit and relaunch automatically.",
-                .updaterLaunchFailed: "Failed to start updater (%@).",
-                .updaterMissingBinary: "Updater binary not found in the app bundle.",
-                .updaterNotExecutable: "Updater binary is not executable.",
-            .updaterHoldPrompt: "Press Enter to close this window. LaunchNext will reopen automatically."
         ],
         .portugueseBrazil: [
             .noAppsFound: "Nenhum app encontrado",
@@ -628,26 +581,6 @@ final class LocalizationManager {
             .okButton: "OK",
 
             // Atualizações
-            .checkForUpdates: "Verificar atualizações",
-            .checkForUpdatesButton: "Verificar atualizações",
-            .checkingForUpdates: "Verificando atualizações...",
-            .upToDate: "Você está na versão mais recente",
-            .updateAvailable: "Atualização disponível",
-            .newVersion: "Nova versão:",
-            .downloadUpdate: "Baixar atualização",
-            .updateCheckFailed: "Falha ao verificar atualização",
-            .tryAgain: "Tentar novamente",
-            .autoCheckForUpdates: "Verificar atualizações automaticamente",
-            .versionParseError: "Erro ao analisar versão",
-            .updatesRefreshButton: "Verificar novamente",
-            .openUpdaterConfig: "Abrir configuração de atualização",
-            .updaterConfirmTitle: "Instalar atualização via Terminal?",
-            .updaterConfirmMessage: "O LaunchNext será encerrado e abrirá o atualizador no Terminal. Quando terminar, o app abrirá novamente sozinho.\n\nSe o botão Baixar atualização à direita estiver transparente, clique mesmo assim.\nIsso é um bug do macOS.⬇️",
-            .updaterTerminalHint: "A atualização ocorre no Terminal. LaunchNext será encerrado e relançado automaticamente.",
-            .updaterLaunchFailed: "Falha ao iniciar o atualizador (%@).",
-            .updaterMissingBinary: "Binário do atualizador não encontrado no bundle.",
-            .updaterNotExecutable: "O atualizador não é executável.",
-            .updaterHoldPrompt: "Pressione Enter para fechar esta janela. LaunchNext será aberto novamente automaticamente.",
 
             .settingsSectionGeneral: "Geral",
             .settingsSectionAppSources: "Fontes de apps",
@@ -660,8 +593,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Backup",
             .settingsSectionDevelopment: "Desenvolvimento",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Atualizações",
-            .settingsSectionAbout: "Sobre",
+                        .settingsSectionAbout: "Sobre",
             .backupPlaceholderTitle: "Backup",
             .backupPlaceholderSubtitle: "Crie, gerencie e restaure backups aqui.",
             .backupChooseFolderButton: "Escolher pasta de backup",
@@ -805,20 +737,7 @@ final class LocalizationManager {
                 .importFailedTitle: "Nhập thất bại",
                 .okButton: "OK",
 
-                // Cập nhật
-                .checkForUpdates: "Kiểm tra cập nhật",
-                .checkForUpdatesButton: "Kiểm tra cập nhật",
-                .checkingForUpdates: "Đang kiểm tra cập nhật...",
-                .upToDate: "Bạn đang dùng phiên bản mới nhất",
-                .updateAvailable: "Có bản cập nhật mới",
-                .newVersion: "Phiên bản mới:",
-                .downloadUpdate: "Tải bản cập nhật",
-                .updateCheckFailed: "Kiểm tra cập nhật thất bại",
-                .tryAgain: "Thử lại",
-                .autoCheckForUpdates: "Tự động kiểm tra cập nhật",
-                .versionParseError: "Lỗi phân tích phiên bản",
-                .updatesRefreshButton: "Kiểm tra lại",
-                .openUpdaterConfig: "Mở tệp cấu hình cập nhật"
+                
             ],
             .simplifiedChinese: [
                 .noAppsFound: "未找到任何应用",
@@ -928,8 +847,6 @@ final class LocalizationManager {
                 .versionPrefix: "版本 ",
                 .versionLabelFormat: "版本 %@",
                 .versionFallback: "未知",
-                .updatesHeroUpdateAvailable: "有可用更新",
-                .updatesHeroUpToDate: "版本已是最新",
                 .aboutProjectLink: "项目主页",
                 .aboutReportBug: "反馈问题",
                 .aboutContribute: "参与贡献",
@@ -970,27 +887,6 @@ final class LocalizationManager {
                 .importFailedTitle: "导入失败",
                 .okButton: "确定",
 
-                // 更新检查相关
-                .checkForUpdates: "检查更新",
-                .checkForUpdatesButton: "检查更新",
-                .checkingForUpdates: "正在检查更新...",
-                .upToDate: "已是最新版本",
-                .updateAvailable: "发现新版本",
-                .newVersion: "新版本：",
-                .downloadUpdate: "下载更新",
-                .updateCheckFailed: "更新检查失败",
-                .tryAgain: "重试",
-            .autoCheckForUpdates: "自动检查更新",
-            .versionParseError: "版本解析错误",
-            .updatesRefreshButton: "重新检查",
-            .openUpdaterConfig: "打开更新配置文件",
-            .updaterConfirmTitle: "使用终端安装更新？",
-                .updaterConfirmMessage: "LaunchNext 将会退出并在终端中运行更新器。安装完成后会自动重新启动。\n\n如果右侧的“下载更新”按钮是透明的，请直接点击。\n这是 macOS 的 bug。⬇️",
-                .updaterTerminalHint: "更新会在终端中执行，LaunchNext 将退出并自动重新启动。",
-                .updaterLaunchFailed: "无法启动更新器（%@）。",
-                .updaterMissingBinary: "应用包内未找到更新器。",
-                .updaterNotExecutable: "更新器文件不可执行。",
-                .updaterHoldPrompt: "更新完成后，按回车键关闭窗口，LaunchNext 会自动重新打开。"
             ],
             .japanese: [
                 .noAppsFound: "アプリが見つかりません",
@@ -1109,27 +1005,6 @@ final class LocalizationManager {
                 .importFailedTitle: "インポート失敗",
                 .okButton: "OK",
 
-                // 更新検査関連
-                .checkForUpdates: "アップデートを確認",
-                .checkForUpdatesButton: "アップデートを確認",
-                .checkingForUpdates: "アップデートを確認中...",
-                .upToDate: "最新版です",
-                .updateAvailable: "アップデートが利用可能",
-                .newVersion: "新しいバージョン：",
-                .downloadUpdate: "アップデートをダウンロード",
-                .updateCheckFailed: "アップデート確認に失敗",
-                .tryAgain: "再試行",
-            .autoCheckForUpdates: "自動でアップデートを確認",
-            .versionParseError: "バージョン解析エラー",
-            .updatesRefreshButton: "再チェック",
-            .openUpdaterConfig: "アップデート設定ファイルを開く",
-            .updaterConfirmTitle: "ターミナルでアップデートをインストールしますか？",
-                .updaterConfirmMessage: "LaunchNext は終了し、ターミナル上のアップデーターが起動します。インストール完了後は自動的に再起動します。\n\n右側の「アップデートをダウンロード」ボタンが透明に見えても、そのままクリックしてください。\nこれは macOS の不具合です。⬇️",
-                .updaterTerminalHint: "アップデートはターミナルで実行されます。LaunchNext は終了し、自動で再起動します。",
-                .updaterLaunchFailed: "アップデーターの起動に失敗しました（%@）。",
-                .updaterMissingBinary: "アプリ内にアップデーターが見つかりません。",
-                .updaterNotExecutable: "アップデーターが実行可能ではありません。",
-                .updaterHoldPrompt: "アップデート後は Enter キーを押してこのウィンドウを閉じてください。LaunchNext は自動的に再起動します。"
             ],
             .korean: [
                 .noAppsFound: "앱을 찾을 수 없어요",
@@ -1248,27 +1123,6 @@ final class LocalizationManager {
                 .importFailedTitle: "가져오기에 실패했어요",
                 .okButton: "확인",
 
-                // 업데이트 관련
-                .checkForUpdates: "업데이트 확인",
-                .checkForUpdatesButton: "업데이트 확인",
-                .checkingForUpdates: "업데이트를 확인하고 있어요",
-                .upToDate: "최신 버전이에요",
-                .updateAvailable: "업데이트가 있어요",
-                .newVersion: "새 버전:",
-                .downloadUpdate: "업데이트 다운로드",
-                .updateCheckFailed: "업데이트 확인에 실패했어요",
-                .tryAgain: "다시 시도하기",
-                .autoCheckForUpdates: "업데이트 자동 확인",
-                .versionParseError: "버전 분석 오류",
-                .updatesRefreshButton: "다시 확인하기",
-                .openUpdaterConfig: "업데이트 구성 파일 열기",
-                .updaterConfirmTitle: "터미널에서 업데이트를 설치할까요?",
-                .updaterConfirmMessage: "LaunchNext가 종료되고 터미널 기반 업데이터가 실행될거에요. 설치가 끝나면 앱이 자동으로 다시 열려요.\n\n오른쪽의 '업데이트 다운로드' 버튼이 투명해 보여도 그냥 눌러 주세요.\nmacOS 버그예요.⬇️",
-                .updaterTerminalHint: "업데이트는 터미널에서 진행돼요. LaunchNext는 종료 후 자동으로 다시 실행돼요.",
-                .updaterLaunchFailed: "업데이터를 시작하지 못했어요(%@).",
-                .updaterMissingBinary: "앱 번들에서 업데이터를 찾을 수 없어요",
-                .updaterNotExecutable: "업데이터 파일을 실행할 수 없어요",
-                .updaterHoldPrompt: "업데이트가 끝나면 Enter 키를 눌러 창을 닫으세요. LaunchNext가 자동으로 다시 열려요."
             ],
             .french: [
                 .noAppsFound: "Aucune application trouvée",
@@ -1384,26 +1238,6 @@ final class LocalizationManager {
                 .okButton: "OK",
 
                 // Vérification des mises à jour
-                .checkForUpdates: "Vérification des mises à jour",
-                .checkForUpdatesButton: "Vérifier les mises à jour",
-                .checkingForUpdates: "Vérification en cours...",
-                .upToDate: "LaunchNext est à jour",
-                .updateAvailable: "Mise à jour disponible",
-                .newVersion: "Nouvelle version :",
-                .downloadUpdate: "Télécharger la mise à jour",
-                .updateCheckFailed: "Échec de la vérification de mise à jour",
-                .tryAgain: "Réessayer",
-                .autoCheckForUpdates: "Vérification automatique",
-                .versionParseError: "Erreur d'analyse de version",
-                .updatesRefreshButton: "Vérifier à nouveau",
-                .openUpdaterConfig: "Ouvrir le fichier de configuration des mises à jour",
-                .updaterConfirmTitle: "Installer la mise à jour via le Terminal ?",
-                .updaterConfirmMessage: "LaunchNext va se fermer et lancer le programme de mise à jour en mode Terminal. L’application se relancera automatiquement une fois l’installation terminée.\n\nSi le bouton Télécharger la mise à jour à droite paraît transparent, cliquez dessus malgré tout.\nIl s’agit d’un bug de macOS.⬇️",
-                .updaterTerminalHint: "La mise à jour s’exécute dans le Terminal. LaunchNext va se fermer puis se relancer automatiquement.",
-                .updaterLaunchFailed: "Échec du lancement du programme de mise à jour (%@).",
-                .updaterMissingBinary: "Programme de mise à jour introuvable dans le paquet de l’application.",
-                .updaterNotExecutable: "Le programme de mise à jour n’est pas exécutable.",
-                .updaterHoldPrompt: "Appuyez sur Entrée pour fermer cette fenêtre. LaunchNext va se relancer automatiquement."
             ],
             .spanish: [
                 .noAppsFound: "No se encontraron apps",
@@ -1519,27 +1353,7 @@ final class LocalizationManager {
                 .okButton: "OK",
 
                 // Verificación de actualizaciones
-                .checkForUpdates: "Buscar actualizaciones",
-                .checkForUpdatesButton: "Buscar actualizaciones",
-                .checkingForUpdates: "Buscando actualizaciones...",
-                .upToDate: "Estás actualizado",
-                .updateAvailable: "Actualización disponible",
-                .newVersion: "Nueva versión:",
-                .downloadUpdate: "Descargar actualización",
-                .updateCheckFailed: "Error al buscar actualizaciones",
-                .tryAgain: "Intentar de nuevo",
-                .autoCheckForUpdates: "Buscar actualizaciones automáticamente",
-                .versionParseError: "Error de análisis de versión",
-                .updatesRefreshButton: "Comprobar de nuevo",
-                .openUpdaterConfig: "Abrir archivo de configuración de actualización",
-                .updaterConfirmTitle: "¿Instalar la actualización en Terminal?",
-                .updaterConfirmMessage: "LaunchNext se cerrará y abrirá el actualizador en Terminal. La aplicación se volverá a abrir automáticamente cuando termine la instalación.\n\nSi el botón Descargar actualización de la derecha se ve transparente, haz clic igualmente.\nEs un error de macOS.⬇️",
-                .updaterTerminalHint: "La actualización se ejecuta en Terminal. LaunchNext se cerrará y se abrirá de nuevo automáticamente.",
-                .updaterLaunchFailed: "No se pudo iniciar el actualizador (%@).",
-                .updaterMissingBinary: "No se encontró el actualizador dentro del paquete de la app.",
-                .updaterNotExecutable: "El actualizador no es ejecutable.",
-                .updaterHoldPrompt: "Cuando termine la actualización, pulse Intro para cerrar esta ventana. LaunchNext se abrirá automáticamente."
-            ],
+                                                                                                                                                                                                                                                                                                                                            ],
             .italian: [
                 .noAppsFound: "Nessuna app trovata",
                 .searchPlaceholder: "Cerca",
@@ -1669,27 +1483,7 @@ final class LocalizationManager {
                 .okButton: "OK",
 
                 // Controllo aggiornamenti
-                .checkForUpdates: "Controlla aggiornamenti",
-                .checkForUpdatesButton: "Controlla aggiornamenti",
-                .checkingForUpdates: "Controllo aggiornamenti...",
-                .upToDate: "Il software è aggiornato",
-                .updateAvailable: "Aggiornamento disponibile",
-                .newVersion: "Nuova versione:",
-                .downloadUpdate: "Scarica aggiornamento",
-                .updateCheckFailed: "Controllo aggiornamenti fallito",
-                .tryAgain: "Riprova",
-                .autoCheckForUpdates: "Controlla aggiornamenti automaticamente",
-                .versionParseError: "Errore nell’analisi della versione",
-                .updatesRefreshButton: "Controlla di nuovo",
-                .openUpdaterConfig: "Apri file di configurazione dell’updater",
-                .updaterConfirmTitle: "Installare l’aggiornamento tramite Terminale?",
-                .updaterConfirmMessage: "LaunchNext verrà chiuso e si aprirà l’updater nel Terminale. L’app si riaprirà automaticamente al termine dell’installazione.\n\nSe il pulsante Scarica aggiornamento a destra sembra trasparente, cliccaci comunque.\nÈ un bug di macOS.⬇️",
-                .updaterTerminalHint: "L’aggiornamento viene eseguito nel Terminale. LaunchNext verrà chiuso e si riaprirà automaticamente.",
-                .updaterLaunchFailed: "Impossibile avviare l’updater (%@).",
-                .updaterMissingBinary: "Binario dell’updater non trovato nel bundle dell’app.",
-                .updaterNotExecutable: "Il binario dell’updater non è eseguibile.",
-                .updaterHoldPrompt: "Premi Invio per chiudere questa finestra. LaunchNext si riaprirà automaticamente."
-            ],
+                                                                                                                                                                                                                                                                                                                                            ],
             .czech: [
                 .noAppsFound: "Nebyla nalezena žádná aplikace",
                 .searchPlaceholder: "Hledat",
@@ -1805,27 +1599,7 @@ final class LocalizationManager {
                 .okButton: "OK",
 
                 // Update
-                .checkForUpdates: "Kontrola aktualizací",
-                .checkForUpdatesButton: "Zkontrolovat aktualizace",
-                .checkingForUpdates: "Kontrola aktualizací…",
-                .upToDate: "Používáte nejnovější verzi",
-                .updateAvailable: "Je k dispozici aktualizace",
-                .newVersion: "Nová verze:",
-                .downloadUpdate: "Stáhnout aktualizaci",
-                .updateCheckFailed: "Kontrola aktualizací se nezdařila",
-                .tryAgain: "Zkusit znovu",
-                .autoCheckForUpdates: "Automaticky kontrolovat aktualizace",
-                .versionParseError: "Chyba při zpracování verze",
-                .updatesRefreshButton: "Zkontrolovat znovu",
-                .openUpdaterConfig: "Otevřít konfiguraci aktualizátoru",
-                .updaterConfirmTitle: "Nainstalovat aktualizaci přes Terminál?",
-                .updaterConfirmMessage: "LaunchNext se ukončí a otevře aktualizátor v Terminálu. Aplikace se po dokončení instalace automaticky znovu spustí.\n\nPokud tlačítko Stáhnout aktualizaci vpravo vypadá průhledně, stejně na něj klikněte.\nJde o chybu macOS.⬇️",
-                .updaterTerminalHint: "Aktualizace probíhá v Terminálu. LaunchNext se ukončí a automaticky znovu spustí.",
-                .updaterLaunchFailed: "Nepodařilo se spustit aktualizátor (%@).",
-                .updaterMissingBinary: "Binární soubor aktualizátoru nebyl nalezen v balíčku aplikace.",
-                .updaterNotExecutable: "Binární soubor aktualizátoru není spustitelný.",
-                .updaterHoldPrompt: "Stiskněte Enter pro zavření tohoto okna. LaunchNext se automaticky znovu otevře."
-            ],
+                                                                                                                                                                                                                                                                                                                                            ],
             .german: [
                 .noAppsFound: "Keine Apps gefunden",
                 .searchPlaceholder: "Suchen",
@@ -1941,27 +1715,7 @@ final class LocalizationManager {
                 .okButton: "OK",
 
                 // Update-Überprüfung
-                .checkForUpdates: "Nach Updates suchen",
-                .checkForUpdatesButton: "Nach Updates suchen",
-                .checkingForUpdates: "Suche nach Updates...",
-                .upToDate: "Sie sind auf dem neuesten Stand",
-                .updateAvailable: "Update verfügbar",
-                .newVersion: "Neue Version:",
-                .downloadUpdate: "Update herunterladen",
-                .updateCheckFailed: "Update-Prüfung fehlgeschlagen",
-                .tryAgain: "Erneut versuchen",
-                .autoCheckForUpdates: "Automatisch nach Updates suchen",
-                .versionParseError: "Versions-Parsing-Fehler",
-                .updatesRefreshButton: "Erneut prüfen",
-                .openUpdaterConfig: "Updater-Konfigurationsdatei öffnen",
-                .updaterConfirmTitle: "Update über das Terminal installieren?",
-                .updaterConfirmMessage: "LaunchNext wird beendet und startet den Terminal-Updater. Nach Abschluss der Installation öffnet sich die App automatisch erneut.\n\nWenn die Schaltfläche Update laden rechts transparent wirkt, klicke sie trotzdem.\nDas ist ein macOS-Fehler.⬇️",
-                .updaterTerminalHint: "Das Update läuft im Terminal. LaunchNext beendet sich und startet danach automatisch erneut.",
-                .updaterLaunchFailed: "Updater konnte nicht gestartet werden (%@).",
-                .updaterMissingBinary: "Updater wurde im App-Paket nicht gefunden.",
-                .updaterNotExecutable: "Updater-Datei ist nicht ausführbar.",
-                .updaterHoldPrompt: "Nach dem Update Enter drücken, um dieses Fenster zu schließen. LaunchNext wird automatisch wieder geöffnet."
-            ],
+                                                                                                                                                                                                                                                                                                                                            ],
             .russian: [
                 .noAppsFound: "Приложения не найдены",
                 .searchPlaceholder: "Поиск",
@@ -2077,20 +1831,7 @@ final class LocalizationManager {
                 .okButton: "OK",
 
                 // Проверка обновлений
-                .checkForUpdates: "Проверить обновления",
-                .checkForUpdatesButton: "Проверить обновления",
-                .checkingForUpdates: "Проверка обновлений...",
-                .upToDate: "У вас последняя версия",
-                .updateAvailable: "Доступно обновление",
-                .newVersion: "Новая версия:",
-                .downloadUpdate: "Скачать обновление",
-                .updateCheckFailed: "Ошибка проверки обновлений",
-                .tryAgain: "Попробовать снова",
-                .autoCheckForUpdates: "Автоматически проверять обновления",
-                .versionParseError: "Ошибка разбора версии",
-                .updatesRefreshButton: "Проверить снова",
-                .openUpdaterConfig: "Открыть файл конфигурации обновлений"
-            ]
+                                                                                                                                                                                                                            ]
         ]
 
         builder[.english]?.merge([
@@ -2105,8 +1846,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Backup",
             .settingsSectionDevelopment: "Development",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Updates",
-            .settingsSectionAbout: "About",
+                        .settingsSectionAbout: "About",
             .backupPlaceholderTitle: "Backup",
             .backupPlaceholderSubtitle: "Create, manage, and restore backups here.",
             .backupChooseFolderButton: "Choose Backup Folder",
@@ -2212,8 +1952,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "备份",
             .settingsSectionDevelopment: "开发",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "更新",
-            .settingsSectionAbout: "关于",
+                        .settingsSectionAbout: "关于",
             .sidebarIconSizeTitle: "侧边栏图标大小",
             .sidebarIconSizeLarge: "大",
             .sidebarIconSizeMedium: "中",
@@ -2327,8 +2066,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "バックアップ",
             .settingsSectionDevelopment: "開発",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "アップデート",
-            .settingsSectionAbout: "情報",
+                        .settingsSectionAbout: "情報",
             .sidebarIconSizeTitle: "サイドバーのアイコンサイズ",
             .sidebarIconSizeLarge: "大",
             .sidebarIconSizeMedium: "中",
@@ -2426,8 +2164,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "백업",
             .settingsSectionDevelopment: "개발",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "업데이트",
-            .settingsSectionAbout: "정보",
+                        .settingsSectionAbout: "정보",
             .sidebarIconSizeTitle: "사이드바 아이콘 크기",
             .sidebarIconSizeLarge: "크게",
             .sidebarIconSizeMedium: "중간",
@@ -2525,8 +2262,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Sao lưu",
             .settingsSectionDevelopment: "Phát triển",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Cập nhật",
-            .settingsSectionAbout: "Giới thiệu",
+                        .settingsSectionAbout: "Giới thiệu",
             .sidebarIconSizeTitle: "Kích thước biểu tượng thanh bên",
             .sidebarIconSizeLarge: "Lớn",
             .sidebarIconSizeMedium: "Trung bình",
@@ -2624,8 +2360,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Sauvegarde",
             .settingsSectionDevelopment: "Développement",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Mises à jour",
-            .settingsSectionAbout: "À propos",
+                        .settingsSectionAbout: "À propos",
             .sidebarIconSizeTitle: "Taille des icônes de la barre latérale",
             .sidebarIconSizeLarge: "Grand",
             .sidebarIconSizeMedium: "Moyen",
@@ -2723,8 +2458,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Copia de seguridad",
             .settingsSectionDevelopment: "Desarrollo",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Actualizaciones",
-            .settingsSectionAbout: "Acerca de",
+                        .settingsSectionAbout: "Acerca de",
             .sidebarIconSizeTitle: "Tamaño de iconos de la barra lateral",
             .sidebarIconSizeLarge: "Grande",
             .sidebarIconSizeMedium: "Mediano",
@@ -2818,8 +2552,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Backup",
             .settingsSectionDevelopment: "Sviluppo",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Aggiornamenti",
-            .settingsSectionAbout: "Informazioni",
+                        .settingsSectionAbout: "Informazioni",
             .sidebarIconSizeTitle: "Dimensione icone barra laterale",
             .sidebarIconSizeLarge: "Grande",
             .sidebarIconSizeMedium: "Media",
@@ -2907,8 +2640,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Záloha",
             .settingsSectionDevelopment: "Vývoj",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Aktualizace",
-            .settingsSectionAbout: "O aplikaci",
+                        .settingsSectionAbout: "O aplikaci",
             .sidebarIconSizeTitle: "Velikost ikon postranní lišty",
             .sidebarIconSizeLarge: "Velká",
             .sidebarIconSizeMedium: "Střední",
@@ -3006,8 +2738,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Backup",
             .settingsSectionDevelopment: "Entwicklung",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Updates",
-            .settingsSectionAbout: "Info",
+                        .settingsSectionAbout: "Info",
             .sidebarIconSizeTitle: "Größe der Seitenleisten-Symbole",
             .sidebarIconSizeLarge: "Groß",
             .sidebarIconSizeMedium: "Mittel",
@@ -3105,8 +2836,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "Резервные копии",
             .settingsSectionDevelopment: "Разработка",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "Обновления",
-            .settingsSectionAbout: "О приложении",
+                        .settingsSectionAbout: "О приложении",
             .sidebarIconSizeTitle: "Размер иконок боковой панели",
             .sidebarIconSizeLarge: "Большой",
             .sidebarIconSizeMedium: "Средний",
@@ -3217,9 +2947,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "推奨：Next エンジン（省メモリ・滑らか）",
             .versionLabelFormat: "バージョン %@",
             .versionFallback: "不明",
-            .updatesHeroUpdateAvailable: "更新があります",
-            .updatesHeroUpToDate: "最新バージョンです",
-            .aboutProjectLink: "プロジェクト",
+                                    .aboutProjectLink: "プロジェクト",
             .aboutReportBug: "不具合を報告",
             .aboutContribute: "貢献する",
             .aboutBlog: "ブログ",
@@ -3263,9 +2991,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "추천: Next 엔진(메모리 절감, 부드러운 동작)",
             .versionLabelFormat: "버전 %@",
             .versionFallback: "알 수 없음",
-            .updatesHeroUpdateAvailable: "업데이트 있음",
-            .updatesHeroUpToDate: "최신 버전입니다",
-            .aboutProjectLink: "프로젝트 링크",
+                                    .aboutProjectLink: "프로젝트 링크",
             .aboutReportBug: "버그 신고",
             .aboutContribute: "기여하기",
             .aboutBlog: "블로그",
@@ -3309,9 +3035,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "Khuyến nghị: Next Engine (ít bộ nhớ, mượt hơn)",
             .versionLabelFormat: "Phiên bản %@",
             .versionFallback: "Không rõ",
-            .updatesHeroUpdateAvailable: "Có bản cập nhật",
-            .updatesHeroUpToDate: "Phiên bản đã là mới nhất",
-            .aboutProjectLink: "Liên kết dự án",
+                                    .aboutProjectLink: "Liên kết dự án",
             .aboutReportBug: "Báo lỗi",
             .aboutContribute: "Đóng góp",
             .aboutBlog: "Blog",
@@ -3355,9 +3079,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "Recommandé : Next Engine (moins de mémoire, plus fluide)",
             .versionLabelFormat: "Version %@",
             .versionFallback: "Inconnu",
-            .updatesHeroUpdateAvailable: "Mise à jour disponible",
-            .updatesHeroUpToDate: "Version à jour",
-            .aboutProjectLink: "Lien du projet",
+                                    .aboutProjectLink: "Lien du projet",
             .aboutReportBug: "Signaler un bug",
             .aboutContribute: "Contribuer",
             .aboutBlog: "Blog",
@@ -3401,9 +3123,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "Recomendado: Next Engine (menos memoria, más fluido)",
             .versionLabelFormat: "Versión %@",
             .versionFallback: "Desconocido",
-            .updatesHeroUpdateAvailable: "Actualización disponible",
-            .updatesHeroUpToDate: "Versión actualizada",
-            .aboutProjectLink: "Enlace del proyecto",
+                                    .aboutProjectLink: "Enlace del proyecto",
             .aboutReportBug: "Reportar un error",
             .aboutContribute: "Contribuir",
             .aboutBlog: "Blog",
@@ -3447,9 +3167,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "Consigliato: Next Engine (meno memoria, più fluido)",
             .versionLabelFormat: "Versione %@",
             .versionFallback: "Sconosciuto",
-            .updatesHeroUpdateAvailable: "Aggiornamento disponibile",
-            .updatesHeroUpToDate: "Versione aggiornata",
-            .aboutProjectLink: "Link progetto",
+                                    .aboutProjectLink: "Link progetto",
             .aboutReportBug: "Segnala un bug",
             .aboutContribute: "Contribuisci",
             .aboutBlog: "Blog",
@@ -3493,9 +3211,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "Doporučeno: Next Engine (méně paměti, plynulejší)",
             .versionLabelFormat: "Verze %@",
             .versionFallback: "Neznámý",
-            .updatesHeroUpdateAvailable: "K dispozici je aktualizace",
-            .updatesHeroUpToDate: "Verze je aktuální",
-            .aboutProjectLink: "Odkaz na projekt",
+                                    .aboutProjectLink: "Odkaz na projekt",
             .aboutReportBug: "Nahlásit chybu",
             .aboutContribute: "Přispět",
             .aboutBlog: "Blog",
@@ -3539,9 +3255,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "Empfohlen: Next Engine (weniger Speicher, flüssiger)",
             .versionLabelFormat: "Version %@",
             .versionFallback: "Unbekannt",
-            .updatesHeroUpdateAvailable: "Update verfügbar",
-            .updatesHeroUpToDate: "Version ist aktuell",
-            .aboutProjectLink: "Projektlink",
+                                    .aboutProjectLink: "Projektlink",
             .aboutReportBug: "Fehler melden",
             .aboutContribute: "Beitragen",
             .aboutBlog: "Blog",
@@ -3585,9 +3299,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "Рекомендуется: Next Engine (меньше памяти, плавнее)",
             .versionLabelFormat: "Версия %@",
             .versionFallback: "Неизвестно",
-            .updatesHeroUpdateAvailable: "Доступно обновление",
-            .updatesHeroUpToDate: "Версия актуальна",
-            .aboutProjectLink: "Ссылка на проект",
+                                    .aboutProjectLink: "Ссылка на проект",
             .aboutReportBug: "Сообщить об ошибке",
             .aboutContribute: "Участвовать",
             .aboutBlog: "Блог",
@@ -3631,9 +3343,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "Recomendado: Next Engine (menos memória, mais fluido)",
             .versionLabelFormat: "Versão %@",
             .versionFallback: "Desconhecido",
-            .updatesHeroUpdateAvailable: "Atualização disponível",
-            .updatesHeroUpToDate: "Versão atualizada",
-            .aboutProjectLink: "Link do projeto",
+                                    .aboutProjectLink: "Link do projeto",
             .aboutReportBug: "Relatar bug",
             .aboutContribute: "Contribuir",
             .aboutBlog: "Blog",
@@ -3767,20 +3477,7 @@ final class LocalizationManager {
             .importSuccessfulTitle: "आयात सफल",
             .importFailedTitle: "आयात विफल",
             .okButton: "ठीक",
-            .checkForUpdates: "अपडेट जाँचें",
-            .checkForUpdatesButton: "अपडेट जाँचें",
-            .checkingForUpdates: "अपडेट की जाँच हो रही है…",
-            .upToDate: "आप नवीनतम संस्करण पर हैं",
-            .updateAvailable: "नया अपडेट उपलब्ध",
-            .newVersion: "नया संस्करण:",
-            .downloadUpdate: "अपडेट डाउनलोड करें",
-            .updateCheckFailed: "अपडेट जाँच विफल",
-            .tryAgain: "पुनः प्रयास",
-            .autoCheckForUpdates: "स्वचालित रूप से अपडेट जाँचें",
-            .versionParseError: "संस्करण पार्स त्रुटि",
-            .updatesRefreshButton: "फिर से जाँचें",
-            .openUpdaterConfig: "अपडेट कॉन्फ़िग फ़ाइल खोलें",
-            .settingsSectionGeneral: "सामान्य",
+                                                                                                                                                                        .settingsSectionGeneral: "सामान्य",
             .settingsSectionAppSources: "स्कैन पथ",
             .settingsSectionAppearance: "रूप व व्यवहार",
             .settingsSectionHiddenApps: "छिपे हुए ऐप्स",
@@ -3790,8 +3487,7 @@ final class LocalizationManager {
             .settingsSectionBackup: "बैकअप",
             .settingsSectionDevelopment: "विकास",
             // .settingsSectionAIOverlay: "AI Overlay",
-            .settingsSectionUpdates: "अपडेट्स",
-            .settingsSectionAbout: "परिचय",
+                        .settingsSectionAbout: "परिचय",
             .sidebarIconSizeTitle: "साइडबार आइकन आकार",
             .sidebarIconSizeLarge: "बड़ा",
             .sidebarIconSizeMedium: "मध्यम",
@@ -3876,9 +3572,7 @@ final class LocalizationManager {
             .performanceModeRecommendation: "अनुशंसित: Next Engine (कम मेमोरी, अधिक स्मूथ)",
             .versionLabelFormat: "संस्करण %@",
             .versionFallback: "अज्ञात",
-            .updatesHeroUpdateAvailable: "अपडेट उपलब्ध",
-            .updatesHeroUpToDate: "संस्करण अद्यतित है",
-            .aboutProjectLink: "प्रोजेक्ट लिंक",
+                                    .aboutProjectLink: "प्रोजेक्ट लिंक",
             .aboutReportBug: "बग रिपोर्ट करें",
             .aboutContribute: "योगदान करें",
             .aboutBlog: "ब्लॉग",
